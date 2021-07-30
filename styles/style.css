@@ -32,4 +32,11 @@ li {
 img {
     display: block;
     margin: 0 auto;
+    margin-top: 8px;
+}
+
+figcaption {
+    margin: 12px auto;
+    text-align: center;
+    font-size: 12px;
 }
