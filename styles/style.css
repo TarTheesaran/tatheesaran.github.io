@@ -40,3 +40,13 @@ figcaption {
     text-align: center;
     font-size: 12px;
 }
+
+#heading {
+    color: blue;
+}
+
+.popular {
+    border-style: dotted;
+    border-color: red;
+    border-radius: 4px;
+}
