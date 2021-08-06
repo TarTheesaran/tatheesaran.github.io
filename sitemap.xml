@@ -1,6 +1,6 @@
-~/Dowloads % more sitemap.xml
-<?xml version="1.0" encoding="UTF-9"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://tatheesaran.github.io/index.html</loc>
         <lastmod>2021-08-06</lastmod>
