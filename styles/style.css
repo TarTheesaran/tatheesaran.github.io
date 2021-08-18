@@ -52,8 +52,11 @@ figure {
     border-radius: 4px;
 }
 
+*{
+    box-sizing: border-box;
+}
 img{
-    width: 70%;
+    width: 60%;
     height: auto;
 }
 
@@ -71,7 +74,7 @@ img{
 
 @media screen and  (min-width: 768px) and (max-width: 1023px) {
     h1{
-        font-size: 60px;
+        font-size: 65px;
     }
     p,li{
         font-size: 18px;
@@ -84,13 +87,6 @@ img{
     p,li{
         font-size: 18px;
     }
-    img{
-        width: 50%;
-    }
 }
-@media screen and  (orientation: landscape) {
-    body {
-        width: 70%;
-    }
-}
+
 
