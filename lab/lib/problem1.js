@@ -1,4 +1,4 @@
-var inputNumber, formatNumber;
+let inputNumber, formatNumber;
 do {
     inputNumber = prompt("Enter a postive integer", "");
     formatNumber = Math.floor(Number(inputNumber));
@@ -9,13 +9,12 @@ function showPrimes(nunber) {
     if (nunber == 1) {
         alert("For n = 1 don't have prime numbers");
     } else {
-        let ansPrime = "For n = " + nunber + " prime numbers are ";
+        let primeList = [];
         for (let i = 2; i <= nunber; i++) {
             if (!isPrime(i)) continue;
-            console.log(i);
-            ansPrime += (i + ",");
+            primeList.push(i);
         }
-        alert(ansPrime.slice(0, -1));
+        alert("For n = " + nunber + " prime numbers are " + primeList);
     }
 
 }
