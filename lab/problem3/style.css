@@ -80,7 +80,7 @@ header a{
     overflow-y: scroll;
     overflow-x: hidden;
     gap: 10px;
-    max-height: 50%;
+    max-height: 80vh;
 }
 
 .dataCard {
