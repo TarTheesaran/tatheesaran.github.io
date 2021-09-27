@@ -22,8 +22,14 @@
         var catPic = document.getElementById("cat-pic");
         var onCatClick = function (e) {
             var stashePic = document.getElementById("mustache-pic");
-            stashePic.style.top = "145px";
-            stashePic.style.left = "112px";
+            // stashePic.style.top = "100px";
+            // stashePic.style.left = "100px";
+            console.log(event);
+            let positionY = e.clientY;
+            let positionX = e.clientX;
+            // console.log("X:" + positionX + ", Y:" + positionY)
+            stashePic.style.top = (e.clientY - 20) + "px";
+            stashePic.style.left = (e.clientX - 50) + "px";
         };
         catPic.addEventListener("click", onCatClick);
 

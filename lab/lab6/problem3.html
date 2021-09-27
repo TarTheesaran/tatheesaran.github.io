@@ -24,8 +24,6 @@
             width: 30px;
             height: 30px;
             border-radius: 50%;
-            top: 28px;
-            left: 25px;
             background: rgb(237, 237, 237);
         }
     </style>
@@ -40,6 +38,8 @@
         document.body.appendChild(planetElement);
         let moonElement = document.createElement("div");
         moonElement.className = "moon";
+        moonElement.style.top = "28px";
+        moonElement.style.left = "25px";
         moonElement.style.backgroundColor = "yellow";
         document.body.appendChild(moonElement);
         let textElement = document.createElement("div");
