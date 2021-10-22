@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem 1</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+
+      li button {
+        font-size: 8px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item" />
+      <button>Add item</button>
+    </div>
+
+    <ul></ul>
+
+    <script>
+      let body = document.querySelector("body");
+      var p = document.createElement("p");
+      body.appendChild(p);
+      let button = document.querySelector("button");
+      button.addEventListener("click", function () {
+        addElement();
+      });
+
+      function addElement() {
+        let inputValue = document.getElementById("item").value;
+        if (inputValue != null && inputValue.trim() !== "") {
+          let ul = document.querySelector("ul");
+
+          let liElement = document.createElement("li");
+          liElement.innerHTML += inputValue;
+          let deleteButton = document.createElement("button");
+          deleteButton.onclick = () => {
+            deleteButton.parentElement.remove();
+            checkElementLength();
+          };
+          deleteButton.innerHTML = "delete";
+          liElement.appendChild(deleteButton);
+          ul.appendChild(liElement);
+          document.getElementById("item").value = "";
+          checkElementLength();
+        } else {
+          document.getElementById("item").value = "";
+        }
+      }
+
+      function checkElementLength() {
+        let ilLength = document.getElementsByTagName("li").length;
+        if (ilLength < 1) {
+          p.innerHTML = "";
+        } else if (ilLength === 1) {
+          p.innerHTML = "The list has 1 item";
+        } else {
+          p.innerHTML = "The list has " + ilLength + " item";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Problem 3</title>
+</head>
+
+<body>
+  <ol id="demo"></ol>
+  <script>
+    fetch("./files/places.json")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        info = data.results;
+        for (var placeInfo of info) {
+          let li = document.createElement("li");
+          let name = document.createElement("p");
+          let location = document.createElement("p");
+          name.innerHTML = "name = " + placeInfo.name;
+          name.style.color = "blue";
+          location.innerHTML = "location = " + placeInfo.geometry.location.lat + " " + placeInfo.geometry.location.lng;
+          location.style.color = "green";
+          li.appendChild(name);
+          li.appendChild(location);
+
+          document.getElementById("demo").appendChild(li);
+        }
+      })
+      .catch((err) => {
+        // Do something.
+        console.log(err);
+      });
+  </script>
+</body>
+
+</html>
